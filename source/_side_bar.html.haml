@@ -1,0 +1,38 @@
+.flex.flex-col.justify-between.h-full.text-gray-500.bg-white
+  %nav
+    = link_to '/',
+              class: ['block', 'py-2.5', 'px-4', 'my-4', 'rounded', 'transition',
+                      'duration-100', 'hover:bg-gradient-to-r', 'hover:from-cyan-500',
+                      'hover:to-cyan-500', 'hover:text-white'] do
+      %i.fa-solid.fa-house.mr-2
+      Dashboard
+    = link_to 'console',
+              class: ['block', 'py-2.5', 'px-4', 'my-4', 'rounded', 'transition',
+                      'duration-100', 'hover:bg-gradient-to-r', 'hover:from-cyan-500',
+                      'hover:to-cyan-500', 'hover:text-white'] do
+      %i.fa-solid.fa-terminal.mr-2
+      Console
+    = link_to 'devices',
+              class: ['block', 'py-2.5', 'px-4', 'my-4', 'rounded', 'transition',
+                      'duration-100', 'hover:bg-gradient-to-r', 'hover:from-cyan-500',
+                      'hover:to-cyan-500', 'hover:text-white'] do
+      %i.fa-solid.fa-sim-card.mr-2
+      Devices
+    .invisible
+      = link_to 'users',
+                class: ['block', 'py-2.5', 'px-4', 'my-4', 'rounded', 'transition',
+                        'duration-100', 'hover:bg-gradient-to-r', 'hover:from-cyan-500',
+                        'hover:to-cyan-500', 'hover:text-white'] do
+        %i.fa-solid.fa-users.mr-2
+        Users
+    .invisible
+      = link_to '/',
+                class: ['block', 'py-2.5', 'px-4', 'my-4', 'rounded', 'transition',
+                        'duration-100', 'hover:bg-gradient-to-r', 'hover:from-cyan-500',
+                        'hover:to-cyan-500', 'hover:text-white'] do
+        %i.fa-solid.fa-right-from-bracket.mr-2
+        Log out
+
+  %div
+    .bg-gradient-to-r.from-cyan-300.to-cyan-500.h-px.mt-2
+    %p.mb-1.px-5.py-3.text-left.text-xs.text-cyan-500 &copy; 2023 Justin's Engineering Services, LLC

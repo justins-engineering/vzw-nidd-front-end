@@ -1,0 +1,31 @@
+---
+title: Dashboard
+---
+
+.h-full.grid.grid-cols-12.grid-rows-12
+  .row-span-1.col-start-2.col-span-10.self-end
+    %h1.text-white.text-lg.font-semibold.mb-2 Devices
+  .row-span-10.col-start-2.col-span-10
+    %table.table-auto.w-full.bg-white.dark:bg-slate-800.text-sm.border.border-slate-400.dark:border-slate-500
+      %thead.font-semibold.text-slate-900.dark:text-slate-200.bg-slate-50.dark:bg-slate-700
+        %tr.divide-x.divide-slate-300.dark:divide-slate-600.border-b.border-slate-300.dark:border-slate-600
+          %th.p-1 Location
+          %th.p-1 Device identifier
+          %th.p-1 ICCID
+          %th.p-1 MSISDN
+          %th.p-1 Connection
+          %th.p-1 Last connection date
+          %th.p-1 Data usage
+          %th.p-1 Log file
+      %tbody.text-slate-500.dark:text-slate-400.divide-y.divide-slate-300.dark:divide-slate-700
+        %tr.divide-x.divide-slate-300.dark:divide-slate-700
+          %td.p-1 Home
+          %td.p-1 123412341234123
+          %td.p-1 56785678567856785678
+          %td.p-1 89089089089
+          %td.p-1 Disconnected
+          %td.p-1 10/04/2023 02:12:03 PM
+          %td.p-1 12 MB
+          %td.p-1.text-center
+            = link_to '/' do
+              %i.fa-solid.fa-file-arrow-down
