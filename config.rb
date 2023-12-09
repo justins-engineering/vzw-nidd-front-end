@@ -8,7 +8,7 @@ activate :external_pipeline,
          latency: 2,
          source: './dist/'
 
-activate :directory_indexes
+# activate :directory_indexes
 
 # Layouts
 # https://middlemanapp.com/basics/layouts/
