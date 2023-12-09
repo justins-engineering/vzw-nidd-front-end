@@ -4,5 +4,4 @@
 .sass-cache
 build/
 dist/
-tailwind.config.js
 tailwindcss
