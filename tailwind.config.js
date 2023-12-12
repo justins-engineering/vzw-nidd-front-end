@@ -2,7 +2,8 @@
 module.exports = {
   content: [
     './source/**/*.{html,js,haml}',
-    './assets/**/*.js',
+    './node_modules/@fortawesome/fontawesome-free/css/solid.css',
+    './node_modules/xterm/css/xterm.css'
   ],
   theme: {
     extend: {
@@ -42,4 +43,3 @@ module.exports = {
   },
   plugins: [],
 }
-

@@ -3,7 +3,7 @@
 
 activate :external_pipeline,
          name: :tailwind_cli,
-         command: './tailwindcss -i ./source/stylesheets/site.css -o ./dist/stylesheets/site.css ' \
+         command: 'bun run tailwindcss -i ./source/stylesheets/site.css -o ./dist/stylesheets/site.css ' \
                   "#{build? ? '--minify' : '--watch'}",
          latency: 2,
          source: './dist/'
@@ -17,9 +17,7 @@ activate :external_pipeline,
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
-
-# With alternative layout
-# page '/path/to/file.html', layout: 'other_layout'
+page "/terminal.html", layout: 'terminal'
 
 # Proxy pages
 # https://middlemanapp.com/advanced/dynamic-pages/
