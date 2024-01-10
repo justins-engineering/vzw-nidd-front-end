@@ -7,8 +7,13 @@ out_dir = './dist'
 activate :external_pipeline,
          name: :bun_build,
          command: "bun build --entrypoints #{ts_files} --outdir ./source/javascripts " \
-                  "#{build? ? '--minify --sourcemap=external' : '--watch'} " \
-                  "&& bun run tailwindcss -i ./source/stylesheets/*.css -o #{out_dir}/stylesheets/*.css " \
+                  "#{build? ? '--minify --sourcemap=external' : '--watch'}",
+         latency: 2,
+         source: out_dir
+
+activate :external_pipeline,
+         name: :tailwindcss_build,
+         command: "bun run tailwindcss -i ./source/stylesheets/*.css -o #{out_dir}/stylesheets/*.css " \
                   "#{build? ? '--minify' : '--watch'}",
          latency: 2,
          source: out_dir
@@ -18,7 +23,6 @@ activate :external_pipeline,
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
-# Per-page layout changes
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
