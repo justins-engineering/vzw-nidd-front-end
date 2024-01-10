@@ -1,12 +1,17 @@
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
+ts_files = './typescripts/*.ts'
+out_dir = './dist'
+
 activate :external_pipeline,
-         name: :tailwind_cli,
-         command: 'bun run tailwindcss -i ./source/stylesheets/site.css -o ./dist/stylesheets/site.css ' \
+         name: :bun_build,
+         command: "bun build --entrypoints #{ts_files} --outdir ./source/javascripts " \
+                  "#{build? ? '--minify --sourcemap=external' : '--watch'} " \
+                  "&& bun run tailwindcss -i ./source/stylesheets/*.css -o #{out_dir}/stylesheets/*.css " \
                   "#{build? ? '--minify' : '--watch'}",
          latency: 2,
-         source: './dist/'
+         source: out_dir
 
 # activate :directory_indexes
 
@@ -17,7 +22,7 @@ activate :external_pipeline,
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
-page "/terminal.html", layout: 'terminal'
+page '/terminal.html', layout: 'terminal'
 
 # Proxy pages
 # https://middlemanapp.com/advanced/dynamic-pages/

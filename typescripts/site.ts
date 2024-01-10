@@ -4,4 +4,15 @@ import { faTerminal } from '@fortawesome/free-solid-svg-icons'
 import { faSimCard } from '@fortawesome/free-solid-svg-icons'
 
 library.add(faHouse, faSimCard, faTerminal);
-dom.watch();
+
+function onDomReady() {
+  dom.watch();
+}
+
+if (document.readyState === "loading") {
+  // Loading hasn't finished yet
+  document.addEventListener("DOMContentLoaded", onDomReady);
+} else {
+  // `DOMContentLoaded` has already fired
+  onDomReady();
+}
