@@ -3,6 +3,7 @@ import { faHouse } from '@fortawesome/free-solid-svg-icons'
 import { faTerminal } from '@fortawesome/free-solid-svg-icons'
 import { faSimCard } from '@fortawesome/free-solid-svg-icons'
 import { faFileArrowDown } from '@fortawesome/free-solid-svg-icons'
+import * as Turbo from "@hotwired/turbo"
 
 library.add(faHouse, faSimCard, faTerminal, faFileArrowDown);
 

@@ -2,6 +2,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@hotwired/turbo": "^8.0.13",
     "@tailwindcss/cli": "^4.0.17",
     "tailwindcss": "^4.0.17",
     "typescript": "^5.8.2"
