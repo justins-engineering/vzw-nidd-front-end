@@ -13,7 +13,7 @@ activate :external_pipeline,
 
 activate :external_pipeline,
          name: :tailwindcss_build,
-         command: "bun run tailwindcss -i ./source/stylesheets/*.css -o #{out_dir}/stylesheets/site.css " \
+         command: "bunx @tailwindcss/cli -i ./source/stylesheets/*.css -o #{out_dir}/stylesheets/site.css " \
                   "#{build? ? '--minify' : '--watch'}",
          latency: 2,
          source: out_dir
