@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    meta( charset = 'utf-8' )
+    meta( 'http-equiv' = 'x-ua-compatible', content = 'ie=edge' )
+    meta( name = 'viewport',
+           content = 'width=device-width, initial-scale=1, shrink-to-fit=no' )
+    block title
+      title JES
+    link(rel='stylesheet', href='/stylesheet/site.css')
+    script(src='/javascripts/site.js')
+  body.h-screen.grid.grid-cols-12.antialiased.text-slate-500.bg-white(class='dark:text-slate-400 dark:bg-slate-900')
+    div(class='sm:col-span-2')
+      block side_bar
+    div(class='sm:col-span-10')
+      block content
