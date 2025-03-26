@@ -7,7 +7,7 @@ out_dir = './dist'
 activate :external_pipeline,
          name: :bun_build,
          command: "bun build --entrypoints #{ts_files} --outdir ./source/javascripts " \
-                  "#{build? ? '--minify --sourcemap=external' : '--watch'}",
+                  "#{build? ? '--minify --sourcemap=external' : '--watch --sourcemap=linked'}",
          latency: 2,
          source: out_dir
 

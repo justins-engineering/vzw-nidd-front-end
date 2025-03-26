@@ -1,10 +1,12 @@
 import { library, dom } from '@fortawesome/fontawesome-svg-core'
-import { faHouse } from '@fortawesome/free-solid-svg-icons'
-import { faTerminal } from '@fortawesome/free-solid-svg-icons'
-import { faSimCard } from '@fortawesome/free-solid-svg-icons'
-import { faFileArrowDown } from '@fortawesome/free-solid-svg-icons'
+import { faHouse } from '@fortawesome/free-solid-svg-icons/faHouse'
+import { faTerminal } from '@fortawesome/free-solid-svg-icons/faTerminal'
+import { faSimCard } from '@fortawesome/free-solid-svg-icons/faSimCard'
+import { faFileArrowDown } from '@fortawesome/free-solid-svg-icons/faFileArrowDown'
+import { faRightFromBracket } from '@fortawesome/free-solid-svg-icons/faRightFromBracket'
+import { faUsers } from '@fortawesome/free-solid-svg-icons/faUsers'
 
-library.add(faHouse, faSimCard, faTerminal, faFileArrowDown);
+library.add(faHouse, faSimCard, faTerminal, faFileArrowDown, faRightFromBracket, faUsers);
 
 function onDomReady() {
   dom.watch();
